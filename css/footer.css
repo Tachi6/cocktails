@@ -1,0 +1,62 @@
+footer {
+    background-color: var(--background-color);
+    height: 240px;
+}
+
+.footer-container {
+    max-width: 1280px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.credits {
+    display: flex;
+    margin-left: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.credits span {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 300;
+    color: var(--primary-text-color);
+    padding: 0 8px;
+}
+
+p.copyright {
+    font-size: 14px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+    letter-spacing: 0.5px;
+    margin-left: 16px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        align-items: center;
+    }
+
+    .credits {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+    /* Remove "|" in small screen */
+    .credits span {
+        display: none;
+    }
+
+    p.copyright, 
+    footer .cocktails-logo {
+        margin-left: 0;
+    }
+}
+    

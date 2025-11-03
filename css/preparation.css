@@ -1,0 +1,194 @@
+.preparation {
+    background-color: var(--background-color);
+    padding: var(--screen-padding);
+    width: 75vw;
+    position: absolute;
+    top: 0px;
+    right: -75vw;
+    transition: 0.5s linear;
+    z-index: 2;
+}
+
+.preparation.show {
+    right: 0;
+}
+
+.preparation-container {
+    min-height: var(--square-large-width);
+    display: flex;
+    gap: var(--screen-padding);
+    transition: 0.5s linear;
+}
+
+.preparation-img {
+    height: var(--square-large-width);
+    border: 1px solid var(--icon-color);
+    padding: 5px;
+    align-self: self-start;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+}
+
+.preparation-details {
+    height: 100%;
+    flex: 1;
+    align-self: self-start;
+    position: relative;
+}
+
+.glass-age {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+h4.glass {
+    color: var(--secondary-text-color);
+    font-weight: 200;
+    font-size: 1em;
+}
+
+span.age {
+    font-size: 1.2em;
+    padding-bottom: 2px;
+}
+
+h3.not-rated {
+    width: 122px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 2px 7px 3px 7px; 
+    border: 1px solid var(--primary-color);
+}
+
+/* To show ingredients in 3 columns */
+ul {
+    list-style-type: none;
+    margin-top: 5px;
+    display: grid;
+    grid-template-areas:
+        'i1 i6 i11'
+        'i2 i7 i12'
+        'i3 i8 i13'
+        'i4 i9 i14'
+        'i5 i10 i15';
+}
+
+.description {
+    margin-top: 5px;
+}
+
+.valorate {
+    width: 190px;
+    margin-bottom: var(--valoration-container-height);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* Google icons settings */
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 200,
+    'opsz' 48
+}
+
+h3.valoration-text {
+    margin-top: 5px;
+    transition: 0.25s linear;
+}
+
+.show-rating-btn {
+    background: center url('../assets/svg/add_circle_26dp_B9AC70_FILL0_wght300_GRAD0_opsz24.svg');
+    height: 24px;
+    width: 24px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.show-rating-btn.hide-icon {
+    background: center url('../assets/svg/do_not_disturb_on_26dp_B9AC70_FILL0_wght300_GRAD0_opsz24.svg');
+}
+
+.show-rating-btn:hover {
+    filter: brightness(75%)
+}
+
+.valoration-container {
+    height: var(--valoration-container-height);
+    max-width: 360px;
+    padding: 5px 0 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: calc(100% + (var(--screen-padding) * 2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 5px;
+    transition: 0.5s linear;
+}
+
+.valoration-container.show {
+    left: 0;
+}
+
+.valoration-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+}
+
+/* Rating stars with listeners */
+.rating .rating-star {
+    cursor: pointer;
+}
+
+.rating span.hover {
+    filter: brightness(75%);
+}
+
+/* Settings for custom pop-up ingredients view */
+.pop-up.send-confirmation {
+    top: calc(var(--screen-padding) * -1);
+    right: 0;
+    height: var(--screen-padding);
+}
+
+.pop-up.send-confirmation.show {
+    top: 0;
+}
+
+/* In small screens has 100% width */
+@media (max-width: 1279px) {
+    .preparation {
+        width: 100vw;
+        right: -100vw;
+    }
+
+    .preparation-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .valoration-container {
+        left: 100vw;
+        gap: 10px;
+    }
+
+    .pop-up.send-confirmation {
+        width: 150px;
+        bottom: calc(var(--screen-padding) + 68px);
+        top: unset;
+        right: -150px;
+        height: 20px;
+    }
+
+    .pop-up.send-confirmation.show {
+        top: unset;
+        right: 0;
+    }
+}

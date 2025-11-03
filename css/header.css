@@ -1,0 +1,84 @@
+header {
+    max-width: 1280px;
+    margin: auto;
+    height: var(--header-height);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cocktails-logo {
+    z-index: 0;
+    width: 200px;
+    margin-left: 16px;
+}
+
+nav {
+    z-index: 0;
+    margin-right: 8px;
+}
+
+nav .nav-btn {
+    background-color: transparent;
+    margin: 0 8px;
+    font-weight: 500;
+    color: var(--label-color);
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}
+
+nav .nav-btn.selected {
+    color: var(--primary-color);
+    cursor: default;
+    pointer-events: none;
+}
+
+nav .nav-btn:hover {
+    color: var(--label-color-hover);
+}
+
+/* Custom settings for data error pop-up, which is show over logo */
+.data-error {
+    width: 201px;
+    height: var(--header-height);
+    margin-left: 1em;
+    top: calc(var(--header-height) * -1);
+    right: unset;
+    left: 0;
+}
+
+.data-error.show {
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: var(--header-height-expanded);
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 30px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 8px;
+    }
+
+    nav,
+    .cocktails-logo {
+        margin: 0;
+    }
+
+    .data-error {
+        width: 201px;
+        height: 60px;
+        top: -60px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,23 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content {
+    /* Header is not included */
+    height: calc(80vh - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        height: calc(80vh - var(--header-height-expanded));
+    }
+
+    .h1 {
+        padding-bottom: calc(5vh + var(--header-height-expanded)); 
+    }
+}
+

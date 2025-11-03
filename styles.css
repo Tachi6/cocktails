@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    /* App colors */
+    --primary-color: #F8F8F8;
+    --primary-text-color: #BCBCBC;
+    --secondary-text-color: #7F7F7F;
+    --label-color: #F8F8F899;
+    --label-color-hover: #F8F8F8CD;
+    --background-color: #070707;
+    --button-background: #1A1A1A;
+    --button-background-hover: #363636;
+    --button-background-selected: #515151;
+    --icon-color: #B9AC70;
+    /* Square sizes responsive */
+    --square-small-width: clamp(150px, 11vw, 200px);
+    --square-large-width: clamp(250px, 22vw, 500px);
+    --square-medium-width: clamp(175px, 16.5vw, 350px);
+    --square-regular-width: clamp(137.5px, 19.25vw, 275px);
+    /* Sidebar has a system of 20 units to make it responsive */
+    --cocktail-list-unit: calc(var(--square-small-width) / 20);
+    /* Some paddings, margins and gaps responsive */
+    --screen-padding: clamp(20px, 2.5vw, 50px);
+    /* Letters container width */
+    --letters-width: 18px;
+    /* Ingredients container width */
+    --ingredients-width: 180px;
+    /* Valoration container height */
+    --valoration-container-height: 66.5px;
+    /* Header height normal*/
+    --header-height: 100px;
+    /* Header height expanded*/
+    --header-height-expanded: 120px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--primary-color);
+}

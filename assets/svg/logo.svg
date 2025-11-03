@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="979.93201"
+   height="255.11301"
+   viewBox="0 0 979.93201 255.113"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1.2456864"
+     inkscape:cx="713.26138"
+     inkscape:cy="109.57814"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .word { font-family: 'Ubuntu', Ubuntu, 'Helvetica Neue', Arial, sans-serif; font-size: 160px; font-weight: 700; letter-spacing: 1.25px; fill: #ffffff; }
+      .glass { fill: none; stroke: #ffffff; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <!-- Texto antes de la “I” -->
+  <text
+     class="word"
+     x="-5.2701607"
+     y="184.38863"
+     id="text1">COCKTA</text>
+  <!-- Vaso sustituyendo la “I” -->
+  <!-- Texto después de la “I” -->
+  <text
+     class="word"
+     x="780.34949"
+     y="184.3105"
+     id="text4"
+     style="display:inline">LS</text>
+  <g
+     transform="matrix(0.04666667,0,0,-0.04666667,628.64483,225.20066)"
+     fill="#000000"
+     stroke="none"
+     id="g5"
+     style="fill:#ffffff;fill-opacity:1">
+    <path
+       d="m 2620,4091 v -711 l 23,9 c 112,44 1264,534 1271,541 11,11 -66,148 -141,248 -263,353 -639,564 -1100,617 l -53,6 z"
+       id="path1-5"
+       style="fill:#ffffff;fill-opacity:1" />
+    <path
+       d="m 1855,4589 c -19,-190 39,-463 127,-603 44,-69 120,-150 192,-203 l 58,-43 h 114 c 132,0 121,-13 103,130 -43,349 -212,611 -479,745 -111,56 -107,57 -115,-26 z"
+       id="path2-4"
+       style="fill:#ffffff;fill-opacity:1" />
+    <path
+       d="m 1170,3955 v -215 h 400 400 l -59,75 c -66,83 -128,199 -156,293 l -19,62 h -283 -283 z"
+       id="path3-8"
+       style="fill:#ffffff;fill-opacity:1" />
+    <path
+       d="m 1170,2677 c 0,-572 4,-944 11,-1013 18,-187 55,-359 143,-669 47,-164 88,-318 92,-342 l 6,-43 756,2 757,3 8,49 c 4,27 43,173 86,325 158,554 153,505 158,1579 2,479 1,872 -4,872 -5,0 -147,-58 -317,-130 -170,-71 -321,-130 -335,-130 -16,0 -37,10 -49,23 -21,22 -22,32 -22,200 v 177 h -645 -645 z m 361,514 c 24,-25 29,-38 29,-80 0,-91 -76,-137 -135,-81 -21,20 -25,33 -25,80 0,58 10,79 45,98 33,18 55,14 86,-17 z m -18,-262 c 14,-6 30,-22 36,-36 8,-16 11,-177 11,-517 0,-477 -1,-494 -20,-519 -35,-44 -93,-43 -127,2 -9,12 -12,140 -13,524 v 508 l 25,24 c 26,27 51,31 88,14 z"
+       id="path4-1"
+       style="fill:#ffffff;fill-opacity:1" />
+    <path
+       d="m 1430,385 v -65 h 750 751 l -3,63 -3,62 -747,3 -748,2 z"
+       id="path5"
+       style="fill:#ffffff;fill-opacity:1" />
+  </g>
+</svg>

@@ -1,0 +1,87 @@
+.search-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 5vh;
+}
+
+input[type="text"] {
+    width: 55%;
+    max-width: 1280px;
+    height: 65px;
+    margin-top: 12px;
+    padding-left: 1em;
+    color: var(--background-color);
+    font-size: 16px;
+    font-family: "Source Sans 3", sans-serif;
+    outline: 1px solid var(--label-color);
+    outline-offset: 5px;
+    border: none;
+}
+
+input[type="text"]:focus {
+    outline-color: var(--primary-color);
+}
+
+input[type="text"].searched {
+    outline-color: var(--icon-color);
+}
+
+.search-help {
+    width: 55%;
+    max-width: 1280px;
+    color: var(--primary-text-color);
+    font-weight: 100;
+    font-size: 14px;
+    text-align: start;
+    display: block;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.results {
+    width: 80vw;
+    min-height: 22px;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--screen-padding);
+    transition: 0.5s linear;
+}
+
+.empty-results {
+    position: absolute;
+    bottom: 5vh;
+    opacity: 0;
+    color: var(--primary-color);
+    margin-top: 5vh;
+}
+
+.empty-results.show {
+    opacity: 1;
+}
+
+.square.medium {
+    width: var(--square-medium-width);
+}
+
+/* Change sizes for small screens */
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 80%;
+        height: 45px;
+    }
+
+    .search-help {
+        width: 80%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .results {
+        width: 95%;
+    }
+}
