@@ -1,0 +1,197 @@
+@import url("./header.css");
+@import url("./main.css");
+@import url("./footer.css");
+@import url("./cocktailsList.css");
+@import url("./preparation.css");
+@import url("./ingredients.css");
+@import url("./search.css");
+
+body {
+    background:
+    linear-gradient(90deg, rgba(22, 22, 22, 1) 0%, rgba(45, 45, 45, 1) 50%, rgba(22, 22, 22, 1) 100%),
+    #161616;
+    position: relative;
+}
+
+h1 {
+    /* Main header responsive */
+    font-size: clamp(2em, 15vw, 8em);
+    font-weight: 500;
+    margin: auto;
+    /* To center in background image */
+    padding-bottom: calc(5vh + var(--header-height));
+}
+
+h2 {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+p,
+ul li {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 300;
+    color: var(--primary-text-color);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+a {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 300;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/*  Squares are images with click of cocktails */
+.square {
+    aspect-ratio: 1;
+    border: 1px solid var(--label-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.square:hover {
+    border-color: var(--primary-color);
+}
+
+.square.selected {
+    border-color: var(--icon-color);
+    pointer-events: none;
+    cursor: default;
+}
+
+.square img {
+    position: absolute;
+    aspect-ratio: 1;
+    opacity: 0.75;
+    width: calc(100% - 14px);
+}
+
+.square h5 {
+    align-self: center;
+    justify-self: center;
+    font-size: 1em;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    z-index: 1;
+    padding: 15px;
+}
+
+/* Unify settings for pop-up */
+.pop-up {
+    background-color: var(--button-background);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: 0.5s linear;
+}
+
+.pop-up p {
+    padding: 0 12px;
+    text-align: center;
+}
+
+/* Background settings */
+.background-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Arrow buttons settings */
+.arrow-button {
+    background-color: var(--background-color);
+    display: block;
+    cursor: default;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.arrow-up {
+    background: no-repeat center url(../assets/svg/arrow_drop_up_48dp_B9AC70_FILL0_wght700_GRAD200_opsz48.svg), var(--background-color);
+    cursor: pointer;
+    background-size: contain;
+    pointer-events: auto;
+}
+
+.arrow-down {
+    background: no-repeat center url(../assets/svg/arrow_drop_down_48dp_B9AC70_FILL0_wght700_GRAD200_opsz48.svg), var(--background-color);
+    cursor: pointer;
+    background-size: contain;
+    pointer-events: auto;
+}
+
+/* Rating star settings */
+.rating {
+    margin-top: 2.5px;
+    display: flex;
+}
+
+.rating div.fill {
+    /* Values nedded by google icons */
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.rating span {
+    color: var(--icon-color);
+    width: 22px;
+}
+
+/* Global class for hide elements */
+.hide {
+    opacity: 0;
+}
+
+/* Global class for not display elements */
+.no-display {
+    display: none;
+}
+
+/* Make arrows bigger in small screens */
+@media (max-width: 768px) {
+    .arrow-up {
+        background-size: 28px;
+    }
+
+    .arrow-down {
+        background-size: 28px;
+    }
+}

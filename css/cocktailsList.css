@@ -1,0 +1,41 @@
+/* Cocktails-list (Sidebar uses a system of 20 units to simulate scroll, all space is divided in 20 units */
+.cocktails-list {
+    background-color: var(--background-color);
+    height: calc((var(--cocktail-list-unit) * 62) + (var(--screen-padding) * 2));
+    width: calc((var(--cocktail-list-unit) * 20) + (var(--screen-padding) * 2));
+    padding: 0 var(--screen-padding);
+    position: absolute;
+    top: 0px;
+    left: calc(0px - ((var(--cocktail-list-unit) * 20) + (var(--screen-padding) * 2)));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s linear;
+}
+
+.cocktails-list.show {
+    left: 0;
+}
+
+/* This is the element that simulate scroll */
+.scroll-list {
+    width: calc((var(--cocktail-list-unit) * 20));
+    position: absolute;
+    top: var(--screen-padding);
+    left: var(--screen-padding);
+    display: flex;
+    row-gap: var(--cocktail-list-unit);
+    justify-self: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.5s linear;
+}
+
+.arrow-button.side-bar {
+    width: calc(var(--cocktail-list-unit) * 20);
+    height: var(--screen-padding);
+}

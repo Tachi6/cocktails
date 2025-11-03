@@ -1,0 +1,66 @@
+<!-- PreparationView template -->
+<template id="preparation-template">
+    <img src="cocktail-image" alt="cocktail-img" class="preparation-img">
+    <div class="preparation-details">
+        <div class="glass-age">
+            <h4 class="glass">glass</h4>
+            <span class="age">🔞</span>
+        </div>
+        <h2>cocktail-name</h2>
+        <h3 class="not-rated">SIN VALORAR</h3>
+        <div class="final-rating rating"></div>
+        <h3>INGREDIENTES</h3>
+        <ul></ul>
+        <h3>PREPARACIÓN</h3>
+        <p class="description"></p>
+        <div class="valorate">
+            <h3 class="valoration-text">VALORAR COCKTAIL</h3>
+            <button class="show-rating-btn"></button>
+        </div>
+        <div class="valoration-container">
+            <div class="valoration-field" id="presentation">
+                <p>Presentación</p>
+                <div class="rating"></div>
+            </div>
+            <div class="valoration-field" id="creativity">
+                <p>Creatividad</p>
+                <div class="rating"></div>
+            </div>
+            <div class="valoration-field" id="valoration">
+                <p>Valoración</p>
+                <div class="rating"></div>
+            </div>
+        </div>
+    </div>
+</template>
+<!-- Star Template -->
+<template id="star-template">
+    <div><span class="material-symbols-outlined">star</span></div>
+</template>
+<!-- Rating star Template -->
+<template id="rating-star-template">
+    <div><span class="material-symbols-outlined rating-star">star</span></div>
+</template>
+<!-- Square template -->
+<template id="square-template">
+    <div class="square">
+        <img src="cocktail-image" alt="cocktail-image">
+        <h5>cocktail-name</h5>
+    </div>
+</template>
+<!-- Letter of ingredient view template -->
+<template id="letter-template">        
+    <button class="letter">letter</button>
+</template>
+<!-- Ingredient of ingredient view template -->
+<template id="ingredient-template">
+    <button class="ingredient">ingredient</button>
+</template>
+<!-- Selected ingredient of ingredient view template -->
+<template id="selected-ingredient-template">
+    <div class="selected-ingredient">
+        <button class="remove-ingredient"></button>
+        <img src="ingredient-image" alt="ingredient-image" class="ingredient-image">
+        <p>ingredient</p>
+    </div>
+</template>

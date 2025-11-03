@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="David Gonzalez de la Rosa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <title>Cocktails</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=star,star_half" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./main.js" type="module"></script>
+</head>
+<body>
+    <div class="background-container">
+        <img src="./assets/img/background.jpg" alt="background-image" class="background-image">
+    </div>
+    <header>
+        <img src="./assets/svg/logo.svg" alt="cocktails-logo" class="cocktails-logo">
+        <nav aria-label="primary">
+            <button class="nav-btn selected" id="home">INICIO</button>
+            <button class="nav-btn" id="popular">POPULARES</button>
+            <button class="nav-btn" id="best">MEJORES</button>
+            <button class="nav-btn" id="latest">NUEVOS</button>
+            <button class="nav-btn" id="ingredients">INGREDIENTES</button>
+        </nav>
+        <div class="pop-up data-error">
+            <p>Error</p>
+        </div>
+    </header>
+    <main>
+        <section class="main-content">
+            <h1>COCKTAILS</h1>
+            <!-- SideBar -->
+            <nav aria-label="secondary" class="cocktails-list">
+                <button class="arrow-button side-bar"></button>
+                <div class="scroll-list"></div>
+                <button class="arrow-button side-bar arrow-down"></button>
+            </nav>
+            <!-- Preparation View -->
+            <article class="preparation">
+                <div class="preparation-container"></div>
+                <div class="pop-up send-confirmation">
+                    <p>Valoración enviada</p>
+                </div>
+            </article>
+            <!-- Ingredients View -->
+            <article class="ingredients-view">
+                <div class="ingredients-view-container">
+                    <div class="letters"></div>
+                    <div class="ingredients-container">
+                        <button class="arrow-button vertical"></button>
+                        <div class="hint-container">
+                            <h3 class="hint-label">INGREDIENTES</h3>
+                            <p class="ingredients-text hint-text">Selecciona una letra para mostrar todos los ingredientes cuya inicial coincida con la letra seleccionada.</p>
+                        </div>
+                        <div class="ingredients-list"></div>
+                        <button class="arrow-button vertical"></button>
+                    </div>
+                    <div class="cocktails-ingredients">
+                        <h2 class="hide">COCKTAILS POR INGREDIENTES</h2>
+                        <div class="selected-ingredients"></div>
+                        <div class="horitzontal-buttons-container">
+                            <div class="button-container">
+                                <div class="spacer"></div>
+                                <button class="arrow-button horitzontal"></button>
+                            </div>
+                            <p class="ingredients-text help-text hide">No se encontraron cocktails con estos ingredientes.</p>
+                            <div class="button-container">
+                                <button class="arrow-button horitzontal"></button>
+                                <div class="spacer"></div>
+                            </div>
+                        </div>                     
+                        <div class="ingredients-matches"></div>
+                    </div>        
+                </div>
+                <div class="pop-up ingredient-alert">
+                    <p>Alert</p>
+                </div>
+            </article>
+        </section>
+        <!-- Search section -->
+        <section class="search-content">
+            <input type="text" name="search" id="search" placeholder="Buscar cocktail">
+            <p class="search-help">Buscar el nombre del cocktail, una parte del texto o la primera letra.</p>
+            <p class="empty-results">Su búsqueda no obtuvo resultados</p>
+            <div class="results"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <img src="./assets/svg/logo.svg" alt="cocktails-logo" class="cocktails-logo">
+            <div class="credits">
+                <p>Design inspired in <a href="https://dribbble.com/shots/4569124-Hennessy-Cocktails-Page">Hennessy Cocktails</a> by <a href="https://dribbble.com/tylersomers">Tyler Somers</a><span>|</span></p>
+                <p>Background image by <a href="https://unsplash.com/es/@davidtoddmccarty">David Todd McCarty</a> in <a href="https://unsplash.com/es/fotos/vaso-transparente-con-liquido-amarillo-y-rodajas-de-limon-mEDuG8GVyc4">Unsplash</a><span>|</span></p>
+                <p>Logo icon by <a href="https://www.freepik.com/author/nursyifa/icons">Nur Syifa Fauziah</a> in <a href="https://www.freepik.com/icon/cocktail_16693482#fromView=search&page=1&position=6&uuid=ce6e4df0-33a7-483f-b202-d3a4bcbae6a7">Freepik</a><span>|</span></p>
+                <p>Powered by <a href="https://tc39.es/ecma262/">Vanilla JS</a></p>
+            </div>
+            <p class="copyright">&#169 2025 DAVID GONZALEZ DE LA ROSA</p>
+        </div>
+    </footer>
+</body>
+</html>
