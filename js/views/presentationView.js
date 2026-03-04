@@ -66,18 +66,28 @@ const showHideGlobalValoration = async (template, globalValoration) => {
 };
 
 export const updateGlobalValoration = async (globalValoration) => {
-  // Don't show not-rated
-  document.querySelector('.not-rated')?.classList.add('hide');
-  document.querySelector('.final-rating')?.classList.add('hide');
-  // Await transition and remove final-rating
+  const notRated = document.querySelector('.not-rated');
+  let finalRating = document.querySelector('.final-rating');
+
+  if (finalRating) {
+    // Don´t show final-rating
+    finalRating.classList.add('hide');
+  } else {
+    // Don't show not-rated
+    notRated.classList.add('hide');
+    // Create final-rating and apped to DOM
+    finalRating = document.createElement('div');
+    finalRating.classList.add('final-rating', 'rating', 'hide');
+    notRated.after(finalRating);
+  }
+
+  // Await transition and remove not-rated and clear final-rating
   await delayAwait(500);
-  document.querySelector('.not-rated')?.remove();
-  document.querySelector('.final-rating')?.remove();
+  notRated?.remove();
+  finalRating.replaceChildren();
   // Load star template
   const starTemplate = await loadTemplate('#star-template');
   // Rating has 5 stars
-  const finalRating = document.createElement('div');
-  finalRating.classList.add('final-rating', 'rating', 'hide');
   for (let i = 1; i <= 5; i++) {
     const clone = starTemplate.cloneNode(true);
     // Fill stars when is under or equal valoration
@@ -90,10 +100,8 @@ export const updateGlobalValoration = async (globalValoration) => {
     }
     finalRating.appendChild(clone);
   }
-  const positionBefore = document.querySelector('.preparation-details h2');
-
-  positionBefore.after(finalRating);
-  document.querySelector('.final-rating')?.classList.remove('hide');
+  // Remove hide to enable transition
+  finalRating.classList.remove('hide');
 };
 
 const fillIngredients = (cocktail, template) => {

@@ -54,11 +54,18 @@ span.age {
   padding-bottom: 2px;
 }
 
+.final-rating-container {
+  position: relative;
+  height: 31px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 h3.not-rated {
   width: 122px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  padding: 2px 7px 3px 7px;
+  margin-top: 2.5px;
+  padding: 1px 7px 2px 7px;
   border: 1px solid var(--primary-color);
   transition: 0.5s linear;
 }
