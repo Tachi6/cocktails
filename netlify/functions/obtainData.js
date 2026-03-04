@@ -1,3 +1,5 @@
+// Netlify function to hide API_KEY
+
 const BASE_URL = 'https://www.thecocktaildb.com/api/json/v2';
 // Obtain API_KEY from Netlify
 const API_KEY = process.env.API_KEY;
