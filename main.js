@@ -7,13 +7,13 @@ import { initVerticalArrowsListeners } from './js/controllers/verticalArrowsCont
 
 // Init all initial listeners, fill cocktails results with random cocktails and init ingredient view
 const start = async () => {
-    initNavBarListeners()
-    initSidebarArrowsListeners()
-    initSearchListener()
-    await createCocktailResults()
-    await initIngredientsView()
-    initVerticalArrowsListeners()
-    initHoritzontalArrowsListeners()
-}
+  initNavBarListeners();
+  initSidebarArrowsListeners();
+  initSearchListener();
+  await createCocktailResults();
+  await initIngredientsView();
+  initVerticalArrowsListeners();
+  initHoritzontalArrowsListeners();
+};
 
-start()
+start();
