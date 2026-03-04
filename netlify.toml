@@ -1,3 +1,7 @@
 [build]
+  command = "# No build command"
   functions = "netlify/functions"
   publish = "."
+
+[functions]
+  node_bundle = true
